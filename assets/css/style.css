@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    background: linear-gradient(0deg, rgba(19,41,61,1) 0%, rgba(237,245,249,1) 63%);
+  }
+
+  .score-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+  button {
+    background: radial-gradient(circle, rgb(252, 243, 164) 0%, rgba(194, 177, 31, 0.954) 100%);
+    border-radius: 8px;
+    color: #13293d;
+    cursor: pointer;
+    font-size: 2em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    max-width: 255px;
+    padding: 20px 52px;
+    text-align: center;
+    transition-duration: 0.15s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    margin-top: 0.6em;
+  }
+
+  header {
+    padding: 40px;
+    text-align: center;
+    background: #1d0bbd;
+    color: #fff;
+    border-bottom:30px #350294;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  ​
+  section {
+    flex: 0 auto;
+    padding: 8px;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 8px;
+  }
+
+  .question {
+    width: 90vw;
+    height: 400px;
+  }
+
+  .answer {
+    width: 90vw;
+    height: 400px;
+  }
+
+  .card {
+    background: radial-gradient(circle, rgb(208, 140, 240) 0%, rgba(104, 5, 233, 0.604) 100%);
+    border: 3px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .text {
+    line-height: 360px;
+  }
+
+  .large-font {
+    font-size: 3.5em;
+    text-align:center;
+  }
+
+  .timer {
+    height: 240px;
+    padding: 10px;
+    background: #f7e64c;
+    color: rgb(5, 0, 82);
+    text-align: center;
+  }
+
+  .timer-text {
+    padding: 55px;
+  }
+
+  @media screen and (max-width: 1183px) {
+    main {
+      flex-direction: column;
+    }
+    .word-guess,
+    .results {
+      width: 90vw;
+    }
+    section {
+      margin: 20px auto;
+      width: 92vw;
+    }
+  }
+
+  @media screen and (max-width: 504px) {
+    .large-font {
+      font-size: 2em;
+    }
+    .timer {
+      height: 200px;
+    }
+  }
+  

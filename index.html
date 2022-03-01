@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>javascript quiz</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8"/>
+    <!-- let browser know website is optimized for mobile -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- import materialize.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <title>States And Capitals Quiz</title>
   </head>
   <body>
-    <header>
-      <div class= "large-font">Quiz</div>
-      <button class="start-button">Start</button>
+
+<!-- quiz title bar with name input -->
+    <header id="startContainer">
+      <h2>how well do you know your</h2>
+      <h1>States and Capitals: the Quiz</h1>
+      <button id="startQuiz">start quiz</button>
     </header>
-​
-    <main>
-      <section>
-        <div class="card question">
+
+      <section class="hide" row container>
+        <form action="" id="player" class="form-group">
+          <label for="playerName"></label>
+          <input type="text" name="" id="playerName" placeholder="your name here">
+        </form>
+        <div class="player-info">
           <div class="large-font text"></div>
         </div>
       </section>
-​
+
       <section>
         <div class="card answer">
           <div class = "score-container">
           <div>
-          <h2>Score: <span class="score">0 </span> </h2>
+          <h4>Score: <span class="score">0 </span> </h4>
         </div>
       </div>
-          <div class= "card timer">
+          <div id="cardTimer">
             <div class = "timer-text">
+            <h5>seconds remaining</h5>
             <div class="large-font timer-count">10</div>
-            <h3>seconds remaining</h3>
-          </div>
-        
-          </div>
+      </div>
+      </section>
+
+      <section>
+         <div id="questions">
+
         </div>
       </section>
-    </main>
+     
+
     <script src="assets/js/script.js"></script>
   </body>
 </html>

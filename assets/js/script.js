@@ -11,7 +11,7 @@ var timeEl = document.querySelector('#timer');
 var secondsLeft = 60
 
 
-
+// questions array
 var questions = [
     {
         question: "What is the capital of Ohio?",
@@ -30,6 +30,7 @@ var questions = [
     },
 ];
 
+// function to display the questions
 function displayQuestion(){
     questionsEl.textContent = questions[questionsIndex].question;
 };
@@ -49,12 +50,12 @@ function countdown() {
 
 };
 
-
+// targets correct answer for question
 function checkAnswer(event){  
     console.log(event.target.textContent)
 }
 
-
+// for loop to roll through questions array
 function displayChoices(){
     for (let i = 0; i < questions[questionsIndex].choices.length; i++) {
         const answers = questions[questionsIndex].choices[i];
@@ -62,11 +63,10 @@ function displayChoices(){
         button.textContent = answers;
         button.addEventListener('click', checkAnswer)
         questionsEl.appendChild(button);
-    }
+    };
 };
 
-
-
+// begins game by hiding intro message, displaying questions, and beginning countdown
 function startGame(){
     document.querySelector("#startContainer").className = 'hide';
     displayQuestion();
@@ -74,6 +74,7 @@ function startGame(){
     countdown();
 };
 
+// listens for button click to start game
 startQuiz.addEventListener("click", function() {
     startGame();
 });

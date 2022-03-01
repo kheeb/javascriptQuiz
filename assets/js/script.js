@@ -1,10 +1,15 @@
-var score = document.querySelector(".score");
+// set variables for score and leaderboard
+var leaderboard = document.querySelector('#leaderboard');
+var score = document.querySelector("#score");
+// set variables for start button
 var startQuiz = document.querySelector("#startQuiz");
+// set variables for questions array
 var questionsEl = document.querySelector('#questions');
 var questionsIndex = 0
+// set variables for timer
 var timeEl = document.querySelector('#timer');
 var secondsLeft = 60
-var leaderboard = document.querySelector('#leaderboard');
+
 
 
 var questions = [
@@ -29,18 +34,19 @@ function displayQuestion(){
     questionsEl.textContent = questions[questionsIndex].question;
 };
 
+// countdown function starts timer
 function countdown() {
+    // sets timer
     var timerInterval = setInterval(function() {
     secondsLeft--;
     timeEl.textContent = secondsLeft + " seconds left!";
-    
-    if(secondsLeft === 0) {
+        if(secondsLeft === 0) {
         clearInterval(timerInterval);
         alert('Time is up!');
         leaderboard.classList.remove('hide');
-    }
-
+        }
     }, 1000);
+
 };
 
 
@@ -56,7 +62,8 @@ function displayChoices(){
         button.textContent = answers;
         button.addEventListener('click', checkAnswer)
         questionsEl.appendChild(button);
-}
+    }
+};
 
 
 
@@ -67,6 +74,6 @@ function startGame(){
     countdown();
 };
 
-startQuiz.addEventListener("click", function(){
-    startGame()
+startQuiz.addEventListener("click", function() {
+    startGame();
 });
